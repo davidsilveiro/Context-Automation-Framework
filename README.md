@@ -5,15 +5,16 @@ Note: All packages assume a Linux OS and Python 3.5.2 (64bit)
 
 1) Installing required packages
 
-- Behave:
+-Behave
+
     pip install behave
 
-- Selenium:
+-Selenium
+
     pip install selenium
 
 - Allure:
-    Linux:
-        Execute:
+        
             sudo apt-add-repository ppa:qameta/allure
             sudo apt-get update 
             sudo apt-get install allure
