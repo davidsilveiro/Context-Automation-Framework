@@ -24,34 +24,27 @@ Note: All packages assume a Linux OS and Python 3.5.2 (64bit)
         
 2) Running tests with Behave
 
+    - NOTE: Navigate to your feature folder!
+
     - Behave (Standard)
-        - Navigate to your feature folder
+
           behave -D BROWSER=firefox UserRoles.feature 
 
 
-    - Behave (Extended - Allure reporting)
-        - Navigate to your feature folder
+    - Behave (Extended - Allure reporting - run behave with test output stored within allure-results)
         
-        Execute - run behave with test output stored within allure-results:
 
             behave -f allure_behave.formatter:AllureFormatter -o allure-results/ -D BROWSER=firefox UserRoles.feature 
 
-        Execute:
-            - Navigate to Allure installation directory (if installed manually),
-            else allure has been set within env path (remove './')
-            
-            ./allure generate /home/derp/Desktop/Python_Page_Object-master/features/allure-results/ --clean
 
 3) Viewing report
     - Navigate to Allures directory installation directory, if manually installed,
     else navigate to choosen custom output directory 
     
     Execute:
-        - Navigate to Allure installation directory (if installed manually),
-        else allure has been set within env path (remove './')
+        - Navigate to Allure installation directory (if installed manually), else allure has been set within env path (remove './')
             
         ./allure generate /home/derp/Desktop/Python_Page_Object-master/features/allure-results/ --clean
-        
-        - Open index.html with your preferred browser
+
         firefox index.html
 
