@@ -9,6 +9,7 @@ Feature: User Role Functionality
     Examples: Roles and file types
       | role  | filetype |
       | user  | jpeg     |
+      | user  | pdf      |
       | user  | gif      |
       | user  | png      |
       | user  | txt      |
@@ -26,5 +27,7 @@ Feature: User Role Functionality
       | admin | xls      |
       | admin | xlsx     |
       | admin | docx     |
+      | admin | pdf      |
+
 
       
