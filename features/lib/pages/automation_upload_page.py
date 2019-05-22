@@ -22,9 +22,6 @@ class AutomationUploadPage(BasePage):
         self.find_element(*self.locator_dictionary['permission']).text
 
     def file_upload(self, fileType):
-
-     
-        """TODO: get context.filetype and append it to save + path """
         """BUG: Application shouldn't just check mime-types """
         rootPath = getcwd() + '/sample_files/pil_red.' + fileType
         print(rootPath*100)
@@ -33,7 +30,7 @@ class AutomationUploadPage(BasePage):
             img = Image.new('RGB',(60, 30),color='red')
             img.save(rootPath)
 
-        elif fileType in ('txt','rtf','doc','xls','xlsx','docx'):
+        elif fileType in ('pdf','txt','rtf','doc','xls','xlsx','docx'):
             with open(rootPath, 'w+') as tmp_file:
                 tmp_file.write("test")
         else:
