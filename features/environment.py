@@ -43,7 +43,6 @@ def before_scenario(context, scenario):
 
 def after_scenario(context, scenario):
     print("starting after_scenario")
-    """ TODO: Find out why this errors and upgrade (due to chdir) """
     
     if scenario.status == "failed":
         if not os.path.exists("failed_scenarios_screenshots"):
