@@ -9,11 +9,15 @@ Note: All packages assume a Linux OS and Python 3.5.2 (64bit)
 
     pip install behave
 
+-Allure Behave formatter
+
+    pip install allure-behave
+
 -Selenium
 
     pip install selenium
 
-- Allure:
+- Allure
         
             sudo apt-add-repository ppa:qameta/allure
             sudo apt-get update 
@@ -44,7 +48,7 @@ Note: All packages assume a Linux OS and Python 3.5.2 (64bit)
     Execute:
         - Navigate to Allure installation directory (if installed manually), else allure has been set within env path (remove './')
             
-        ./allure generate /home/derp/Desktop/Python_Page_Object-master/features/allure-results/ --clean
+        ./allure generate /home/derp/Desktop/Context-Automation-Framework-master/features/allure-results/ --clean
 
         firefox index.html
 
