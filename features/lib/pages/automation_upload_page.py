@@ -24,7 +24,6 @@ class AutomationUploadPage(BasePage):
     def file_upload(self, fileType):
         """BUG: Application shouldn't just check mime-types """
         rootPath = getcwd() + '/sample_files/pil_red.' + fileType
-        print(rootPath*100)
 
         if fileType in ('png', 'gif', 'jpeg'):
             img = Image.new('RGB',(60, 30),color='red')
