@@ -3,10 +3,6 @@ import os
 import shutil
 import time
 import logging
-from time import sleep
-
-def before_all(context):
-     print("Executing before all")
 
 # Scenario level objects are popped off context when scenario exits
 
