@@ -45,7 +45,7 @@ def after_scenario(context, scenario):
         """ Switch back into our previous directory """
         os.chdir("failed_scenarios_screenshots")
         context.browser.save_screenshot(scenario.name + "_failed.png")
-	   os.chdir(original_Path)
+	os.chdir(original_Path)
     
     context.browser.quit()
 
