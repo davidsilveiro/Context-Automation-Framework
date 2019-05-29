@@ -53,21 +53,3 @@ def after_feature(context, feature):
         context.browser.quit()
         print("\nAfter Feature")
 
-"""
-def after_all(context):
-    print("Executing after all\n")
-
-    print("\nUser data:", context.config.userdata)
-    # behave -D ARCHIVE=Yes
-    if 'ARCHIVE' in context.config.userdata.keys():
-        if os.path.exists("failed_scenarios_screenshots"):
-            os.rmdir("failed_scenarios_screenshots")
-            os.makedirs("failed_scenarios_screenshots")
-        if context.config.userdata['ARCHIVE'] == "Yes":
-            shutil.make_archive(
-            time.strftime("%d_%m_%Y"),
-            'zip',
-            "failed_scenarios_screenshots")
-"""
-
-
