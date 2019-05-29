@@ -38,11 +38,11 @@ def before_scenario(context, scenario):
         print ('Browser:', BROWSER, 'is invalid')
 
     context.browser.maximize_window()
-    print 'Before scenario\n'
+    print('Before scenario\n')
 
 
 def after_scenario(context, scenario):
-    print 'starting after_scenario'
+    print('starting after_scenario')
     original_Path = os.getcwd()
     if scenario.status == 'failed':
         if not os.path.exists('failed_scenarios_screenshots'):
@@ -57,4 +57,4 @@ def after_scenario(context, scenario):
 
 def after_feature(context, feature):
     context.browser.quit()
-    print '\nAfter Feature'
+    print('\nAfter Feature')
