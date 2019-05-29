@@ -1,14 +1,19 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from selenium import webdriver
 import os
 import shutil
 import time
 import logging
 
+
 # Scenario level objects are popped off context when scenario exits
 
 def before_scenario(context, scenario):
-    print("User data:", context.config.userdata)
+    print ('User data:', context.config.userdata)
+
     # behave -D BROWSER=chrome
+
     if 'BROWSER' in context.config.userdata.keys():
         if context.config.userdata['BROWSER'] is None:
             BROWSER = 'firefox'
@@ -30,25 +35,26 @@ def before_scenario(context, scenario):
     elif BROWSER == 'phantomjs':
         context.browser = webdriver.PhantomJS()
     else:
-        print("Browser:", BROWSER, "is invalid")
+        print ('Browser:', BROWSER, 'is invalid')
 
     context.browser.maximize_window()
-    print("Before scenario\n")
+    print 'Before scenario\n'
+
 
 def after_scenario(context, scenario):
-    print("starting after_scenario")
+    print 'starting after_scenario'
     original_Path = os.getcwd()
-    if scenario.status == "failed":
-        if not os.path.exists("failed_scenarios_screenshots"):
-            os.makedirs("failed_scenarios_screenshots")
-    else:
-        os.chdir("failed_scenarios_screenshots")
-        context.browser.save_screenshot(scenario.name + "_failed.png")
-	os.chdir(original_Path)
-    
+    if scenario.status == 'failed':
+        if not os.path.exists('failed_scenarios_screenshots'):
+            os.makedirs('failed_scenarios_screenshots')
+
+        os.chdir('failed_scenarios_screenshots')
+        context.browser.save_screenshot(scenario.name + '_failed.png')
+        os.chdir(original_Path)
+
     context.browser.quit()
+
 
 def after_feature(context, feature):
     context.browser.quit()
-    print("\nAfter Feature")
-
+    print '\nAfter Feature'
