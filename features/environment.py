@@ -49,6 +49,6 @@ def after_scenario(context, scenario):
     context.browser.quit()
 
 def after_feature(context, feature):
-        context.browser.quit()
-        print("\nAfter Feature")
+    context.browser.quit()
+    print("\nAfter Feature")
 
