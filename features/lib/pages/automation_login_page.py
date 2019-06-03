@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from .base_page_object import BasePage
+from base_page_object import BasePage
 
 
 class AutomationLoginPage(BasePage):
